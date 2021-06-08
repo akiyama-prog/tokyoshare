@@ -651,6 +651,7 @@ header{
         }
     }
 }
+
 .modal_wrap input{
     display: none;
   }
@@ -678,8 +679,6 @@ header{
   }
 
   .modal_content{
-    align-self: center;
-    width: 60%;
     max-width: 800px;
     padding: 30px 30px 15px;
     box-sizing: border-box;
@@ -725,6 +724,20 @@ header{
     border-radius: 6px;
     cursor: pointer;
   }
+@media screen and (min-width:769px){//PC
+    .modal_wrap input{
+      .modal_content{
+        align-self: center;
+        width: 60%;
+      }
+
+}
+@media screen and (max-width:768px){//SP
+    .modal_wrap input{
+      .modal_content{
+        width: 80%;
+      }
+}
 //アクセス
 .location-title{
     display: flex;
