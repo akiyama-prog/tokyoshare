@@ -599,6 +599,7 @@ header #logo img {
   }
   .facilities, .rooms, .location, .oparation {
     margin-top: 2rem;
+    padding-bottom: 2rem;
   }
 }
 
@@ -705,25 +706,14 @@ header #logo img {
 }
 
 .rooms .rooms-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin-bottom: 2rem;
 }
 
 .rooms .requirement {
-  width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
-}
-
-.rooms .requirement p {
-  margin: 0 1rem;
 }
 
 .rooms .number_of_vacancy {
@@ -753,6 +743,43 @@ header #logo img {
 
 .rooms .index-room-table .jp {
   font-size: .8rem;
+}
+
+@media screen and (min-width: 769px) {
+  .rooms {
+    font-weight: 600;
+  }
+  .rooms .rooms-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .rooms .requirement {
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+  }
+  .rooms .requirement p {
+    margin: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .rooms {
+    font-weight: 600;
+  }
+  .rooms .requirement {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: center;
+    margin-top: 2rem;
+  }
 }
 
 .modal_wrap input {

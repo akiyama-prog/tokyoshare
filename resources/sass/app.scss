@@ -497,6 +497,7 @@ header{
     }
     .facilities,.rooms,.location,.oparation{
         margin-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 .facilities-color{
@@ -593,17 +594,11 @@ header{
         color: $show-main-color;
     }
     .rooms-title{
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 2rem;
     }
     .requirement{
-        width: 60%;
         display: flex;
         text-align: center;
-        p{
-            margin: 0 1rem;
-        }
     }
     .number_of_vacancy{
         color:  #9BC4C0;
@@ -626,6 +621,33 @@ header{
         }
         .jp{
             font-size: .8rem;
+        }
+    }
+}
+@media screen and (min-width:769px){//PC
+    .rooms{
+        font-weight: 600;
+        .rooms-title{
+            display: flex;
+            justify-content: space-between;
+        }
+        .requirement{
+            width: 60%;
+            display: flex;
+            text-align: center;
+            p{
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .rooms{
+        font-weight: 600;
+        .requirement{
+            display: flex;
+            text-align: center;
+            margin-top: 2rem;
         }
     }
 }
