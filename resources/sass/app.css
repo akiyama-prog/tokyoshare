@@ -994,12 +994,29 @@ header #logo img {
   font-weight: bold;
 }
 
+@media screen and (max-width: 768px) {
+  .artical-info {
+    margin-top: 3rem;
+  }
+}
+
 .artical-info .inquiry {
   background-color: #F59A89;
   color: white;
-  padding: 1rem 2rem;
   text-decoration: none;
   border-radius: 9px;
+}
+
+@media screen and (min-width: 769px) {
+  .artical-info .inquiry {
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .artical-info .inquiry {
+    padding: 1rem;
+  }
 }
 
 .artical-info .jump-to-top {

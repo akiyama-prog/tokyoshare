@@ -813,12 +813,21 @@ header{
 .artical-info{
     text-align: center;
     font-weight: bold;
+    @media screen and (max-width:768px){//SP
+        margin-top: 3rem;
+    }
     .inquiry{
         background-color: #F59A89;
         color: white;
-        padding: 1rem 2rem;
+
         text-decoration: none;
         border-radius: 9px;
+        @media screen and (min-width:769px){//PC
+            padding: 1rem 2rem;
+        }
+        @media screen and (max-width:768px){//SP
+            padding: 1rem;
+        }
     }
     .jump-to-top{
         margin-top: 3rem;
