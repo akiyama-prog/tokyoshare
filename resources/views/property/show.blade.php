@@ -15,16 +15,16 @@
 
     <ul class='inside-page-link'>
         <a href="#facilities">
-            <li>FACILITIES</br><span class='jp'>共用部</span></br><span class='facilities-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>FACILITIES</span></br><span class='jp'>共用部</span></br><span class='facilities-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#rooms">
-            <li>ROOMS</br><span class='jp'>占有部</span></br><span class='rooms-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>ROOMS</span></br><span class='jp'>占有部</span></br><span class='rooms-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#location">
-            <li>LOCATION</br><span class='jp'>アクセス・環境</span></br><span class='location-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>LOCATION</span></br><span class='jp'>アクセス・環境</span></br><span class='location-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#oparation">
-            <li>OPARATIOM</br><span class='jp'>運営・管理</span></br><span class='oparation-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>OPARATIOM</span></br><span class='jp'>運営・管理</span></br><span class='oparation-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
     </ul>
 

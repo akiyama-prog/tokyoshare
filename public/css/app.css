@@ -501,10 +501,17 @@ header #logo img {
 }
 
 #property-show {
-  width: 60%;
   margin: 0 auto;
   color: #585656;
   letter-spacing: 0.1rem;
+}
+
+.main-info .main-image {
+  width: 100%;
+}
+
+.main-info .main-image {
+  text-align: center;
 }
 
 .main-info,
@@ -515,18 +522,6 @@ header #logo img {
 .oparation,
 .artical-info {
   border-bottom: #eeede8 3px solid;
-  padding: 3rem 0;
-}
-
-.main-info .main-image {
-  width: 100%;
-  height: auto;
-}
-
-.main-info h1,
-.main-info .main-image {
-  text-align: center;
-  margin: 3rem 0;
 }
 
 .inside-page-link {
@@ -549,6 +544,65 @@ header #logo img {
 
 .inside-page-link .fa-chevron-down {
   font-size: 1.5rem;
+}
+
+@media screen and (min-width: 769px) {
+  #property-show {
+    width: 60%;
+  }
+
+  .main-info,
+  .inside-page-link,
+  .facilities,
+  .rooms,
+  .location,
+  .oparation,
+  .artical-info {
+    padding: 3rem 0;
+  }
+
+  .main-info .main-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .main-info h1,
+  .main-info .main-image {
+    text-align: center;
+    margin: 3rem 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #property-show {
+    width: 98%;
+  }
+
+  .main-info .main-image {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 1rem;
+  }
+
+  .main-info h1 {
+    text-align: left;
+  }
+
+  .inside-page-link {
+    padding-left: 0;
+    padding-bottom: 1rem;
+  }
+
+  .inside-page-link .pc-en {
+    display: none;
+  }
+
+  .facilities,
+  .rooms,
+  .location,
+  .oparation {
+    margin-top: 2rem;
+  }
 }
 
 .facilities-color {
@@ -595,22 +649,7 @@ header #logo img {
   padding: 0;
 }
 
-.facilities .facilities-title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.facilities .facilities-title .feature {
-  width: 60%;
-}
-
-.facilities .facilities-info {
-  display: flex;
-  justify-content: space-between;
-}
-
 .facilities .facilities-info .images {
-  width: 30%;
   flex-wrap: wrap;
 }
 
@@ -622,6 +661,40 @@ header #logo img {
   margin-top: 0.5rem;
   width: 95px;
   height: 80px;
+}
+
+@media screen and (min-width: 769px) {
+  .facilities .facilities-title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .facilities .facilities-title .feature {
+    width: 60%;
+  }
+
+  .facilities .facilities-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .facilities .facilities-info .images {
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .facilities .facilities-title .feature {
+    width: 98%;
+  }
+
+  .facilities .facilities-info .images {
+    width: 30%;
+  }
+
+  .facilities .facilities-info .facilities-info-table {
+    width: 98%;
+  }
 }
 
 .rooms {

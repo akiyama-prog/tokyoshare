@@ -423,24 +423,20 @@ header{
     color: $show-main-color;
 }
 #property-show{
-    width: 60%;
     margin: 0 auto;
     color: $text-color;
     letter-spacing: .1rem;
 }
-.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
-    border-bottom:$show-border-color 3px solid;
-    padding: 3rem 0;
-}
 .main-info{
     .main-image {
         width: 100%;
-        height: auto;
     }
-    h1, .main-image{
+    .main-image{
         text-align: center;
-        margin: 3rem 0;
     }
+}
+.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+    border-bottom:$show-border-color 3px solid;
 }
 .inside-page-link{
     display: flex;
@@ -458,6 +454,49 @@ header{
     }
     .fa-chevron-down{
         font-size: 1.5rem;
+    }
+}
+@media screen and (min-width:769px){//PC
+    #property-show{
+        width: 60%;
+    }
+    .main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+        padding: 3rem 0;
+    }
+    .main-info{
+        .main-image {
+            width: 100%;
+            height: auto;
+        }
+        h1, .main-image{
+            text-align: center;
+            margin: 3rem 0;
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    #property-show{
+        width: 98%;
+    }
+    .main-info{
+        .main-image {
+            width: 100%;
+            height: 350px;
+            margin-bottom: 1rem;
+        }
+        h1{
+            text-align: left;
+        }
+    }
+    .inside-page-link{
+        padding-left: 0;
+        padding-bottom: 1rem;
+        .pc-en{
+            display: none;
+        }
+    }
+    .facilities,.rooms,.location,.oparation{
+        margin-top: 2rem;
     }
 }
 .facilities-color{
@@ -497,18 +536,8 @@ header{
 
 //共用部
 .facilities{
-    .facilities-title{
-        display: flex;
-        justify-content: space-between;
-        .feature{
-            width: 60%;
-        }
-    }
     .facilities-info{
-        display: flex;
-        justify-content: space-between;
         .images{
-            width: 30%;
             flex-wrap: wrap;
         }
         .facilities-info-table{
@@ -520,6 +549,41 @@ header{
     margin-top: .5rem;
     width: 95px;
     height: 80px;
+}
+@media screen and (min-width:769px){//PC
+    .facilities{
+        .facilities-title{
+            display: flex;
+            justify-content: space-between;
+            .feature{
+                width: 60%;
+            }
+        }
+        .facilities-info{
+            display: flex;
+            justify-content: space-between;
+            .images{
+                width: 30%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .facilities{
+        .facilities-title{
+            .feature{
+                width: 98%;
+            }
+        }
+        .facilities-info{
+            .images{
+                width: 30%;
+            }
+            .facilities-info-table{
+                width: 98%;
+            }
+        }
+    }
 }
 //占有部
 .rooms{
