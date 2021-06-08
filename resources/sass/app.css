@@ -4,8 +4,13 @@ html {
 }
 
 header, #main-area {
-  width: 70%;
   margin: 0 auto;
+}
+
+@media screen and (min-width: 769px) {
+  header, #main-area {
+    width: 70%;
+  }
 }
 
 header #logo a {
@@ -29,6 +34,18 @@ header #logo img {
   height: auto;
 }
 
+@media screen and (min-width: 769px) {
+  header #logo p {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header #logo p {
+    margin-left: 1rem;
+  }
+}
+
 #footer {
   text-align: center;
 }
@@ -38,19 +55,6 @@ header #logo img {
 -------------*/
 .eyechach {
   position: relative;
-}
-
-.description {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  margin: 0;
-  padding: 0;
-  font-weight: bold;
-  font-size: 2.5rem;
-  color: #585656;
 }
 
 .eyecatch-img {
@@ -64,20 +68,37 @@ header #logo img {
   background-size: cover;
 }
 
+@media screen and (min-width: 769px) {
+  .description-pc {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 2.5rem;
+    color: #585656;
+  }
+  .eyecatch-img {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .description-pc {
+    display: none;
+  }
+  .eyecatch-img {
+    height: 1000px;
+  }
+}
+
 .searches {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   position: absolute;
-  top: 50%;
-  left: 50%;
   -webkit-transform: translate(-50%, -30%);
           transform: translate(-50%, -30%);
-  margin: 0;
-  padding: 0;
-  width: 90%;
 }
 
 .searches .search {
@@ -101,6 +122,28 @@ header #logo img {
 .searches .search .emphasis-letter {
   color: tomato;
   font-size: 1.7rem;
+}
+
+@media screen and (min-width: 769px) {
+  .searches {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    top: 50%;
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .searches {
+    top: 60%;
+    left: 41%;
+  }
 }
 
 .area-select {

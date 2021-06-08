@@ -7,8 +7,10 @@ html{
     scroll-behavior: smooth;
 }
 header,#main-area{
-    width: 70%;
     margin: 0 auto;
+    @media screen and (min-width:769px){//PC
+        width: 70%;
+    }
 }
 header{
     #logo{
@@ -27,6 +29,14 @@ header{
             width: 5rem;
             height: auto;
         }
+        p{
+            @media screen and (min-width:769px){//PC
+                display: none;
+            }
+            @media screen and (max-width:768px){//SP
+                margin-left: 1rem;
+            }
+        }
     }
 }
 #footer{
@@ -39,17 +49,6 @@ header{
 .eyechach{
     position: relative;
 }
-.description{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin:0;
-    padding:0;
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: $text-color;
-}
 .eyecatch-img{
     width: 100%;
     height: 600px;
@@ -58,16 +57,33 @@ header{
     opacity: .5;
     background-size: cover;
 }
+@media screen and (min-width:769px){//PC
+    .description-pc{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin:0;
+        padding:0;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: $text-color;
+    }
+    .eyecatch-img{
+        height: 600px;
+    }
+}
+@media screen and (max-width:768px){//SP
+    .description-pc{
+        display: none;
+    }
+    .eyecatch-img{
+        height: 1000px;
+    }
+}
 .searches{
-    display: flex;
-    justify-content: space-around;
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%,-30%);
-    margin:0;
-    padding:0;
-    width: 90%;
     .search{
         opacity: .8;
         padding: 0.5em 1em;
@@ -87,6 +103,23 @@ header{
             color: tomato;
             font-size: 1.7rem;
         }
+    }
+}
+@media screen and (min-width:769px){//PC
+    .searches{
+        display: flex;
+        justify-content: space-around;
+        top: 50%;
+        left: 50%;
+        margin:0;
+        padding:0;
+        width: 90%;
+    }
+}
+@media screen and (max-width:768px){//SP
+    .searches{
+        top: 60%;
+        left: 41%;
     }
 }
 .area-select{
