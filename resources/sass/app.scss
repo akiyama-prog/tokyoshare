@@ -792,9 +792,11 @@ header{
 }
 //運営管理
 .oparation-list{
-    display: flex;
-    justify-content: space-around;
     text-align: center;
+    @media screen and (min-width:769px){//PC
+        display: flex;
+        justify-content: space-around;
+    }
     .genre{
         font-weight: bold;
         margin-top: 1rem;
