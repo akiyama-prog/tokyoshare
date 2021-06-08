@@ -172,7 +172,7 @@
     <div class='location'>
         <div class='location-title'>
             <a id='location'>
-                <h2><span class='location-color'>L</span>ATION</br><span class='jp'>アクセス・地域環境</span></h2>
+                <h2><span class='location-color'>L</span>OCATION</br><span class='jp'>アクセス・地域環境</span></h2>
             </a>
             <div class='station-walk'>
                 <div class='station'>
