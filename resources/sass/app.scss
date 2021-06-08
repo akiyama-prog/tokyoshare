@@ -239,12 +239,13 @@ header{
 /*--------
 検索結果ページ
 -----------*/
-#main-area{
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width:769px){//PC
+    #main-area{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 #side_content{
-    width: 28%;
     .key-word{
         font-weight: bold;
         border-bottom: solid 2px #856d53;
@@ -304,8 +305,18 @@ header{
         }
     }
 }
+@media screen and (min-width:769px){//PC
+    #side_content{
+        width: 28%;
+    }
+}
+@media screen and (max-width:768px){//SP
+    #side_content{
+        width: 98%;
+        margin: 0 auto;
+    }
+}
 #main_content{
-    width: 70%;
     .search-title{
         font-size: 1.2rem;
         font-weight: bold;
@@ -314,7 +325,6 @@ header{
         padding: 1rem;
     }
     .property{
-        border-top:  #856d53 dotted 2px;
         margin-top: 1rem;
         .property-name{
             font-size: 1.2rem;
@@ -335,10 +345,7 @@ header{
         }
     }
     .property-info{
-        display: flex;
-        justify-content: space-between;
         .property-img{
-            width: 40%;
             height: auto;
         }
     }
@@ -358,6 +365,53 @@ header{
         }
         .query-btn{
             background: $red;
+        }
+    }
+}
+@media screen and (min-width:769px){//PC
+    #main_content{
+        width: 70%;
+        .search-title{
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #f0f0f0 ;
+            border-top: 3px solid #856d53;
+            padding: 1rem;
+        }
+        .property{
+            border-top:  #856d53 dotted 2px;
+            margin-top: 1rem;
+        }
+        .property-info{
+            display: flex;
+            justify-content: space-between;
+            .property-img{
+                width: 40%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    #main_content{
+        width: 98%;
+        margin: 0 auto;
+        .search-title{
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #f0f0f0 ;
+            border-top: 3px solid #856d53;
+            padding: 1rem;
+        }
+        .property{
+            border-bottom:  #856d53 dotted 2px;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+        .property-info{
+            .property-img{
+                width: 100%;
+                height: auto;
+            }
         }
     }
 }

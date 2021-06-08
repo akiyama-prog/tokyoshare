@@ -292,13 +292,11 @@ header #logo img {
 検索結果ページ
 -----------*/
 
-#main-area {
-  display: flex;
-  justify-content: space-between;
-}
-
-#side_content {
-  width: 28%;
+@media screen and (min-width: 769px) {
+  #main-area {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 #side_content .key-word {
@@ -366,8 +364,17 @@ header #logo img {
   font-size: 1rem;
 }
 
-#main_content {
-  width: 70%;
+@media screen and (min-width: 769px) {
+  #side_content {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #side_content {
+    width: 98%;
+    margin: 0 auto;
+  }
 }
 
 #main_content .search-title {
@@ -379,7 +386,6 @@ header #logo img {
 }
 
 #main_content .property {
-  border-top: #856d53 dotted 2px;
   margin-top: 1rem;
 }
 
@@ -405,13 +411,7 @@ header #logo img {
   color: white;
 }
 
-#main_content .property-info {
-  display: flex;
-  justify-content: space-between;
-}
-
 #main_content .property-info .property-img {
-  width: 40%;
   height: auto;
 }
 
@@ -435,6 +435,60 @@ header #logo img {
 
 #main_content .access-btn .query-btn {
   background: #ff7275;
+}
+
+@media screen and (min-width: 769px) {
+  #main_content {
+    width: 70%;
+  }
+
+  #main_content .search-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #f0f0f0;
+    border-top: 3px solid #856d53;
+    padding: 1rem;
+  }
+
+  #main_content .property {
+    border-top: #856d53 dotted 2px;
+    margin-top: 1rem;
+  }
+
+  #main_content .property-info {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #main_content .property-info .property-img {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #main_content {
+    width: 98%;
+    margin: 0 auto;
+  }
+
+  #main_content .search-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: #f0f0f0;
+    border-top: 3px solid #856d53;
+    padding: 1rem;
+  }
+
+  #main_content .property {
+    border-bottom: #856d53 dotted 2px;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  #main_content .property-info .property-img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 /*--------
