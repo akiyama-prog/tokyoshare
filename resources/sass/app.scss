@@ -428,6 +428,14 @@ header{
     letter-spacing: .1rem;
 }
 .main-info{
+    .property-name{
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #f0f0f0 ;
+        border-top: 3px solid #856d53;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
     .main-image {
         width: 100%;
     }
@@ -435,7 +443,7 @@ header{
         text-align: center;
     }
 }
-.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+.inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
     border-bottom:$show-border-color 3px solid;
 }
 .inside-page-link{
@@ -460,15 +468,16 @@ header{
     #property-show{
         width: 60%;
     }
-    .main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+    .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
         padding: 3rem 0;
     }
     .main-info{
+        text-align: center;
         .main-image {
             width: 100%;
             height: auto;
         }
-        h1, .main-image{
+        .main-image{
             text-align: center;
             margin: 3rem 0;
         }
@@ -813,6 +822,7 @@ header{
 .artical-info{
     text-align: center;
     font-weight: bold;
+    padding-bottom: 3rem;
     @media screen and (max-width:768px){//SP
         margin-top: 3rem;
     }

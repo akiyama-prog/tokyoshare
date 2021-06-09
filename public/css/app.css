@@ -508,6 +508,15 @@ header #logo img {
   letter-spacing: 0.1rem;
 }
 
+.main-info .property-name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #f0f0f0;
+  border-top: 3px solid #856d53;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
 .main-info .main-image {
   width: 100%;
 }
@@ -516,7 +525,6 @@ header #logo img {
   text-align: center;
 }
 
-.main-info,
 .inside-page-link,
 .facilities,
 .rooms,
@@ -553,7 +561,6 @@ header #logo img {
     width: 60%;
   }
 
-  .main-info,
   .inside-page-link,
   .facilities,
   .rooms,
@@ -563,12 +570,15 @@ header #logo img {
     padding: 3rem 0;
   }
 
+  .main-info {
+    text-align: center;
+  }
+
   .main-info .main-image {
     width: 100%;
     height: auto;
   }
 
-  .main-info h1,
   .main-info .main-image {
     text-align: center;
     margin: 3rem 0;
@@ -956,6 +966,7 @@ header #logo img {
 .artical-info {
   text-align: center;
   font-weight: bold;
+  padding-bottom: 3rem;
 }
 
 @media screen and (max-width: 768px) {

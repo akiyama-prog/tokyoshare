@@ -8,13 +8,15 @@
 @section('contents')
 <div id='property-show'>
     <div class='main-info'>
-        <h1>{{ $property->property_name }}</h1>
+        <h1 class='property-name'>{{ $property->property_name }}</h1>
         <img src="/images/{{ $property->main_image }}" alt="物件写真" class='main-image'>
         <p class='introduce'>{{ nl2br($property->introduce) }}</p>
     </div>
-
+    <div class='artical-info'>
+        <div><a href="{{ route('contact',$property) }}" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
+    </div>
     <ul class='inside-page-link'>
-        <a href="#facilities">
+        <a href=" #facilities">
             <li><span class='pc-en'>FACILITIES</span></br><span class='jp'>共用部</span></br><span class='facilities-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#rooms">
@@ -221,8 +223,8 @@
         </div>
     </div>
     <div class='artical-info'>
-        <div><a href="" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
-        <div class='jump-to-top'><a href="#property-show"><i class="fas fa-chevron-up"></i></br>ページ先頭へ戻る</a></div>
+        <div><a href="{{ route('contact',$property) }}" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
+        <div class='jump-to-top'><a href=" #property-show"><i class="fas fa-chevron-up"></i></br>ページ先頭へ戻る</a></div>
     </div>
 </div>
 @endsection
