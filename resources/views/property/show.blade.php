@@ -8,23 +8,25 @@
 @section('contents')
 <div id='property-show'>
     <div class='main-info'>
-        <h1>{{ $property->property_name }}</h1>
+        <h1 class='property-name'>{{ $property->property_name }}</h1>
         <img src="/images/{{ $property->main_image }}" alt="物件写真" class='main-image'>
         <p class='introduce'>{{ nl2br($property->introduce) }}</p>
     </div>
-
+    <div class='artical-info'>
+        <div><a href="{{ route('contact',$property) }}" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
+    </div>
     <ul class='inside-page-link'>
-        <a href="#facilities">
-            <li>FACILITIES</br><span class='jp'>共用部</span></br><span class='facilities-color'><i class="fas fa-chevron-down"></i></span></li>
+        <a href=" #facilities">
+            <li><span class='pc-en'>FACILITIES</span></br><span class='jp'>共用部</span></br><span class='facilities-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#rooms">
-            <li>ROOMS</br><span class='jp'>占有部</span></br><span class='rooms-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>ROOMS</span></br><span class='jp'>占有部</span></br><span class='rooms-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#location">
-            <li>LOCATION</br><span class='jp'>アクセス・環境</span></br><span class='location-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>LOCATION</span></br><span class='jp'>アクセス・環境</span></br><span class='location-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
         <a href="#oparation">
-            <li>OPARATIOM</br><span class='jp'>運営・管理</span></br><span class='oparation-color'><i class="fas fa-chevron-down"></i></span></li>
+            <li><span class='pc-en'>OPARATIOM</span></br><span class='jp'>運営・管理</span></br><span class='oparation-color'><i class="fas fa-chevron-down"></i></span></li>
         </a>
     </ul>
 
@@ -172,7 +174,7 @@
     <div class='location'>
         <div class='location-title'>
             <a id='location'>
-                <h2><span class='location-color'>L</span>ATION</br><span class='jp'>アクセス・地域環境</span></h2>
+                <h2><span class='location-color'>L</span>OCATION</br><span class='jp'>アクセス・地域環境</span></h2>
             </a>
             <div class='station-walk'>
                 <div class='station'>
@@ -221,8 +223,8 @@
         </div>
     </div>
     <div class='artical-info'>
-        <div><a href="" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
-        <div class='jump-to-top'><a href="#property-show"><i class="fas fa-chevron-up"></i></br>ページ先頭へ戻る</a></div>
+        <div><a href="{{ route('contact',$property) }}" class='inquiry'><i class="fas fa-question-circle"></i>{{ $property->property_name }}へお問い合わせ</a></div>
+        <div class='jump-to-top'><a href=" #property-show"><i class="fas fa-chevron-up"></i></br>ページ先頭へ戻る</a></div>
     </div>
 </div>
 @endsection

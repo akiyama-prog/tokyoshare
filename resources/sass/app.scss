@@ -6,9 +6,11 @@ $show-border-color: #eeede8;
 html{
     scroll-behavior: smooth;
 }
-header,#main-area{
-    width: 70%;
+header,#main-area,#contactForm{
     margin: 0 auto;
+    @media screen and (min-width:769px){//PC
+        width: 70%;
+    }
 }
 header{
     #logo{
@@ -27,6 +29,14 @@ header{
             width: 5rem;
             height: auto;
         }
+        p{
+            @media screen and (min-width:769px){//PC
+                display: none;
+            }
+            @media screen and (max-width:768px){//SP
+                margin-left: 1rem;
+            }
+        }
     }
 }
 #footer{
@@ -39,17 +49,6 @@ header{
 .eyechach{
     position: relative;
 }
-.description{
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    margin:0;
-    padding:0;
-    font-weight: bold;
-    font-size: 2.5rem;
-    color: $text-color;
-}
 .eyecatch-img{
     width: 100%;
     height: 600px;
@@ -58,16 +57,33 @@ header{
     opacity: .5;
     background-size: cover;
 }
+@media screen and (min-width:769px){//PC
+    .description-pc{
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        margin:0;
+        padding:0;
+        font-weight: bold;
+        font-size: 2.5rem;
+        color: $text-color;
+    }
+    .eyecatch-img{
+        height: 600px;
+    }
+}
+@media screen and (max-width:768px){//SP
+    .description-pc{
+        display: none;
+    }
+    .eyecatch-img{
+        height: 1000px;
+    }
+}
 .searches{
-    display: flex;
-    justify-content: space-around;
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%,-30%);
-    margin:0;
-    padding:0;
-    width: 90%;
     .search{
         opacity: .8;
         padding: 0.5em 1em;
@@ -87,6 +103,23 @@ header{
             color: tomato;
             font-size: 1.7rem;
         }
+    }
+}
+@media screen and (min-width:769px){//PC
+    .searches{
+        display: flex;
+        justify-content: space-around;
+        top: 50%;
+        left: 50%;
+        margin:0;
+        padding:0;
+        width: 90%;
+    }
+}
+@media screen and (max-width:768px){//SP
+    .searches{
+        top: 60%;
+        left: 41%;
     }
 }
 .area-select{
@@ -206,12 +239,13 @@ header{
 /*--------
 検索結果ページ
 -----------*/
-#main-area{
-    display: flex;
-    justify-content: space-between;
+@media screen and (min-width:769px){//PC
+    #main-area{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 #side_content{
-    width: 28%;
     .key-word{
         font-weight: bold;
         border-bottom: solid 2px #856d53;
@@ -271,8 +305,18 @@ header{
         }
     }
 }
+@media screen and (min-width:769px){//PC
+    #side_content{
+        width: 28%;
+    }
+}
+@media screen and (max-width:768px){//SP
+    #side_content{
+        width: 98%;
+        margin: 0 auto;
+    }
+}
 #main_content{
-    width: 70%;
     .search-title{
         font-size: 1.2rem;
         font-weight: bold;
@@ -281,7 +325,6 @@ header{
         padding: 1rem;
     }
     .property{
-        border-top:  #856d53 dotted 2px;
         margin-top: 1rem;
         .property-name{
             font-size: 1.2rem;
@@ -302,10 +345,7 @@ header{
         }
     }
     .property-info{
-        display: flex;
-        justify-content: space-between;
         .property-img{
-            width: 40%;
             height: auto;
         }
     }
@@ -328,6 +368,53 @@ header{
         }
     }
 }
+@media screen and (min-width:769px){//PC
+    #main_content{
+        width: 70%;
+        .search-title{
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #f0f0f0 ;
+            border-top: 3px solid #856d53;
+            padding: 1rem;
+        }
+        .property{
+            border-top:  #856d53 dotted 2px;
+            margin-top: 1rem;
+        }
+        .property-info{
+            display: flex;
+            justify-content: space-between;
+            .property-img{
+                width: 40%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    #main_content{
+        width: 98%;
+        margin: 0 auto;
+        .search-title{
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #f0f0f0 ;
+            border-top: 3px solid #856d53;
+            padding: 1rem;
+        }
+        .property{
+            border-bottom:  #856d53 dotted 2px;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+        }
+        .property-info{
+            .property-img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
 /*--------
 物件詳細ページ
 -----------*/
@@ -336,24 +423,28 @@ header{
     color: $show-main-color;
 }
 #property-show{
-    width: 60%;
     margin: 0 auto;
     color: $text-color;
     letter-spacing: .1rem;
 }
-.main-info, .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
-    border-bottom:$show-border-color 3px solid;
-    padding: 3rem 0;
-}
 .main-info{
+    .property-name{
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #f0f0f0 ;
+        border-top: 3px solid #856d53;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
     .main-image {
         width: 100%;
-        height: auto;
     }
-    h1, .main-image{
+    .main-image{
         text-align: center;
-        margin: 3rem 0;
     }
+}
+.inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+    border-bottom:$show-border-color 3px solid;
 }
 .inside-page-link{
     display: flex;
@@ -371,6 +462,51 @@ header{
     }
     .fa-chevron-down{
         font-size: 1.5rem;
+    }
+}
+@media screen and (min-width:769px){//PC
+    #property-show{
+        width: 60%;
+    }
+    .inside-page-link,.facilities, .rooms,.location,.oparation,.artical-info{
+        padding: 3rem 0;
+    }
+    .main-info{
+        text-align: center;
+        .main-image {
+            width: 100%;
+            height: auto;
+        }
+        .main-image{
+            text-align: center;
+            margin: 3rem 0;
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    #property-show{
+        width: 98%;
+    }
+    .main-info{
+        .main-image {
+            width: 100%;
+            height: 350px;
+            margin-bottom: 1rem;
+        }
+        h1{
+            text-align: left;
+        }
+    }
+    .inside-page-link{
+        padding-left: 0;
+        padding-bottom: 1rem;
+        .pc-en{
+            display: none;
+        }
+    }
+    .facilities,.rooms,.location,.oparation{
+        margin-top: 2rem;
+        padding-bottom: 2rem;
     }
 }
 .facilities-color{
@@ -410,18 +546,8 @@ header{
 
 //共用部
 .facilities{
-    .facilities-title{
-        display: flex;
-        justify-content: space-between;
-        .feature{
-            width: 60%;
-        }
-    }
     .facilities-info{
-        display: flex;
-        justify-content: space-between;
         .images{
-            width: 30%;
             flex-wrap: wrap;
         }
         .facilities-info-table{
@@ -434,6 +560,41 @@ header{
     width: 95px;
     height: 80px;
 }
+@media screen and (min-width:769px){//PC
+    .facilities{
+        .facilities-title{
+            display: flex;
+            justify-content: space-between;
+            .feature{
+                width: 60%;
+            }
+        }
+        .facilities-info{
+            display: flex;
+            justify-content: space-between;
+            .images{
+                width: 30%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .facilities{
+        .facilities-title{
+            .feature{
+                width: 98%;
+            }
+        }
+        .facilities-info{
+            .images{
+                width: 30%;
+            }
+            .facilities-info-table{
+                width: 98%;
+            }
+        }
+    }
+}
 //占有部
 .rooms{
     font-weight: 600;
@@ -442,17 +603,11 @@ header{
         color: $show-main-color;
     }
     .rooms-title{
-        display: flex;
-        justify-content: space-between;
         margin-bottom: 2rem;
     }
     .requirement{
-        width: 60%;
         display: flex;
         text-align: center;
-        p{
-            margin: 0 1rem;
-        }
     }
     .number_of_vacancy{
         color:  #9BC4C0;
@@ -478,6 +633,34 @@ header{
         }
     }
 }
+@media screen and (min-width:769px){//PC
+    .rooms{
+        font-weight: 600;
+        .rooms-title{
+            display: flex;
+            justify-content: space-between;
+        }
+        .requirement{
+            width: 60%;
+            display: flex;
+            text-align: center;
+            p{
+                margin: 0 1rem;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .rooms{
+        font-weight: 600;
+        .requirement{
+            display: flex;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
+}
+
 .modal_wrap input{
     display: none;
   }
@@ -505,8 +688,6 @@ header{
   }
 
   .modal_content{
-    align-self: center;
-    width: 60%;
     max-width: 800px;
     padding: 30px 30px 15px;
     box-sizing: border-box;
@@ -552,13 +733,25 @@ header{
     border-radius: 6px;
     cursor: pointer;
   }
+@media screen and (min-width:769px){//PC
+    .modal_wrap input{
+      .modal_content{
+        align-self: center;
+        width: 60%;
+      }
+    }
+}
+@media screen and (max-width:768px){//SP
+    .modal_wrap input{
+      .modal_content{
+        width: 80%;
+      }
+    }
+}
 //アクセス
 .location-title{
-    display: flex;
-    justify-content: space-between;
     .station-walk{
         display: flex;
-        width: 60%;
         align-items: center;
         .icon{
             font-size: 2rem;
@@ -585,6 +778,15 @@ header{
         }
     }
 }
+@media screen and (min-width:769px){//PC
+    .location-title{
+        display: flex;
+        justify-content: space-between;
+        .station-walk{
+            width: 60%;
+        }
+    }
+}
 .area-info{
     display: flex;
     justify-content: space-around;
@@ -599,9 +801,11 @@ header{
 }
 //運営管理
 .oparation-list{
-    display: flex;
-    justify-content: space-around;
     text-align: center;
+    @media screen and (min-width:769px){//PC
+        display: flex;
+        justify-content: space-around;
+    }
     .genre{
         font-weight: bold;
         margin-top: 1rem;
@@ -618,12 +822,22 @@ header{
 .artical-info{
     text-align: center;
     font-weight: bold;
+    padding-bottom: 3rem;
+    @media screen and (max-width:768px){//SP
+        margin-top: 3rem;
+    }
     .inquiry{
         background-color: #F59A89;
         color: white;
-        padding: 1rem 2rem;
+
         text-decoration: none;
         border-radius: 9px;
+        @media screen and (min-width:769px){//PC
+            padding: 1rem 2rem;
+        }
+        @media screen and (max-width:768px){//SP
+            padding: 1rem;
+        }
     }
     .jump-to-top{
         margin-top: 3rem;
@@ -632,5 +846,51 @@ header{
             text-decoration: none;
             font-size: .8rem;
         }
+    }
+}
+
+//お問い合わせページ
+#contactForm{
+    .contact-title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #f0f0f0 ;
+        border-top: 3px solid #856d53;
+        padding: 1rem;
+    }
+    .attention{
+        color: $show-main-color;
+        border: 1px solid $show-main-color;
+        padding: .5rem 1rem;
+    }
+    textarea{
+        height: 200px;
+    }
+    .thanx-message{
+        color: $text-color;
+        margin-top: 3rem;
+        margin-bottom: 50%;
+    }
+}
+.error-message{
+    color: $red;
+}
+@media screen and (min-width:769px){//PC
+    #contactForm{
+        .attention{
+            width: 26%;
+        }
+        .form-group{
+            display: flex;
+            justify-content: space-between;
+            label{
+                width: 35%;
+            }
+        }
+    }
+}
+@media screen and (max-width:768px){//SP
+    #contactForm{
+        width: 98%;
     }
 }

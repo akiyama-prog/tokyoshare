@@ -4,7 +4,7 @@
 
 <div id='eyechach'>
     <img src="images/eyecatch_room.jpg" alt="部屋の背景" class='eyecatch-img'>
-    <h2 class='description'>東京23区のシェアハウスを探そう</h2>
+    <h2 class='description-pc'>東京23区のシェアハウスを探そう</h2>
     <div class='searches'>
         <div class='search'>
             <p><span class='emphasis-letter'>エ</span>リアで探す</p>

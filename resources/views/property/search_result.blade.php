@@ -2,6 +2,44 @@
 @section('title','トップページ')
 @section('contents')
 <div id='main-area'>
+    <article id='main_content'>
+        <h2 class='search-title'>
+            @if($area_name && $feature === null) {{ $area_name }}
+            @elseif($feature && $area_name === null) {{ $feature }}
+            @elseif($area_name && $feature) {{ $area_name }}/{{ $feature }}
+            @endif
+            のシェアハウス
+        </h2>
+        @foreach($properties as $property)
+        <div class='property'>
+            <h3 class='property-name'>{{ $property->property_name }}</h3>
+            <div class='property-info'>
+                <img src="/images/{{ $property->main_image }}" alt="物件メイン画像" class='property-img'>
+                <div class='info'>
+                    <table class='table info-table'>
+                        <tr>
+                            <th>賃料</th>
+                            <td>￥{{ number_format(App\Model\Property::getMinLent($property)) }} ~ ￥{{ number_format(App\Model\Property::getMaxLent($property)) }}/月</td>
+                        </tr>
+                        <tr>
+                            <th>アクセス</th>
+                            <td>{{ $property->route1 }}　{{ $property->station1 }}駅　徒歩{{ $property->station_walk1 }}分</td>
+                        </tr>
+                        <tr>
+                            <th>空室</th>
+                            <td>{{ App\Model\Property::countVacancyRooms($property) }}室</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class='access-btn'>
+                <a href="{{ route('show_property',$property) }}" class='show-detail-btn'><i class="fas fa-arrow-circle-right mr-1"></i>詳細をみる</a>
+                <a href="{{ route('contact',$property) }}" class='query-btn'><i class="fas fa-envelope mr-1"></i>この物件に問い合わせる</a>
+            </div>
+        </div>
+        @endforeach
+    </article>
     <aside id='side_content'>
         <div class='detail-search'>
             <p class='key-word'>エリアで絞り込む</p>
@@ -55,43 +93,5 @@
             </ul>
         </div>
     </aside>
-    <article id='main_content'>
-        <h2 class='search-title'>
-            @if($area_name && $feature === null) {{ $area_name }}
-            @elseif($feature && $area_name === null) {{ $feature }}
-            @elseif($area_name && $feature) {{ $area_name }}/{{ $feature }}
-            @endif
-            のシェアハウス
-        </h2>
-        @foreach($properties as $property)
-        <div class='property'>
-            <h3 class='property-name'>{{ $property->property_name }}</h3>
-            <div class='property-info'>
-                <img src="/images/{{ $property->main_image }}" alt="物件メイン画像" class='property-img'>
-                <div class='info'>
-                    <table class='table info-table'>
-                        <tr>
-                            <th>賃料</th>
-                            <td>￥{{ number_format(App\Model\Property::getMinLent($property)) }} ~ ￥{{ number_format(App\Model\Property::getMaxLent($property)) }}/月</td>
-                        </tr>
-                        <tr>
-                            <th>アクセス</th>
-                            <td>{{ $property->route1 }}　{{ $property->station1 }}駅　徒歩{{ $property->station_walk1 }}分</td>
-                        </tr>
-                        <tr>
-                            <th>空室</th>
-                            <td>{{ App\Model\Property::countVacancyRooms($property) }}室</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <div class='access-btn'>
-                <a href="{{ route('show_property',$property) }}" class='show-detail-btn'><i class="fas fa-arrow-circle-right mr-1"></i>詳細をみる</a>
-                <a href="" class='query-btn'><i class="fas fa-envelope mr-1"></i>この物件に問い合わせる</a>
-            </div>
-        </div>
-        @endforeach
-    </article>
 </div>
 @endsection
