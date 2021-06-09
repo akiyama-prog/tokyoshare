@@ -856,6 +856,11 @@ header{
     textarea{
         height: 200px;
     }
+    .thanx-message{
+        color: $text-color;
+        margin-top: 3rem;
+        margin-bottom: 50%;
+    }
 }
 .error-message{
     color: $red;

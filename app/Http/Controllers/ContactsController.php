@@ -28,6 +28,6 @@ class ContactsController extends Controller
         $request->validated();
 
         Mail::to('test@ytest.jp')->send(new ContactProperty($property, $request));
-        return view('contact.thanx');
+        return view('contact.thanx', compact('property'));
     }
 }

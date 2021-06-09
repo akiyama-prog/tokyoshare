@@ -1011,6 +1011,12 @@ header #logo img {
   height: 200px;
 }
 
+#contactForm .thanx-message {
+  color: #585656;
+  margin-top: 3rem;
+  margin-bottom: 50%;
+}
+
 .error-message {
   color: #ff7275;
 }
