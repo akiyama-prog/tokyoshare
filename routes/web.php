@@ -19,3 +19,4 @@ Route::get('/detail-area-search/{city}', 'PropertyController@detailAreaSearch')-
 Route::get('/show-property/{property}', 'PropertyController@showProperty')->name('show_property');
 
 Route::get('/contact-us/{property}', 'ContactsController@contactForm')->name('contact');
+Route::post('/send-mail/{property}', 'ContactsController@sendMail')->name('send');

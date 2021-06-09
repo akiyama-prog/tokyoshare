@@ -10,22 +10,22 @@
         </div>
         @endif
         <p class=attention>全て必須項目です。</p>
-        <form action="" method="post">
+        <form action="{{ route('send',$property) }}" method="post">
             @csrf
+            @error('name')<div class='error-message'>*{{ $message }}</div>@enderror
             <div class='form-group'>
                 <label for="name">氏名</label>
                 <input type="text" name="name" class="form-control" />
-                @error('name')<div class='error-message'>*{{ $message }}</div>@enderror
             </div>
+            @error('email')<div class='error-message'>*{{ $message }}</div>@enderror
             <div class='form-group'>
                 <label for="email">Eメールアドレス</label>
                 <input type="text" name="email" class="form-control" />
-                @error('email')<div class='error-message'>*{{ $message }}</div>@enderror
             </div>
+            @error('content')<div class='error-message'>*{{ $message }}</div>@enderror
             <div class='form-group'>
                 <label for="content">お問合せ内容</label>
                 <textarea type="text" name="content" class="form-control"></textarea>
-                @error('content')<div class='error-message'>*{{ $message }}</div>@enderror
             </div>
             <input type="submit" class='btn btn-info btn-block'>
         </form>

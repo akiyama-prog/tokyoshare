@@ -857,6 +857,9 @@ header{
         height: 200px;
     }
 }
+.error-message{
+    color: $red;
+}
 @media screen and (min-width:769px){//PC
     #contactForm{
         .attention{

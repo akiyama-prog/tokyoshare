@@ -1047,6 +1047,10 @@ header #logo img {
   height: 200px;
 }
 
+.error-message {
+  color: #ff7275;
+}
+
 @media screen and (min-width: 769px) {
   #contactForm .attention {
     width: 26%;
