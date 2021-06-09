@@ -848,10 +848,27 @@ header{
         border-top: 3px solid #856d53;
         padding: 1rem;
     }
+    .attention{
+        color: $show-main-color;
+        border: 1px solid $show-main-color;
+        padding: .5rem 1rem;
+    }
+    textarea{
+        height: 200px;
+    }
 }
 @media screen and (min-width:769px){//PC
     #contactForm{
-        width: 70%;
+        .attention{
+            width: 26%;
+        }
+        .form-group{
+            display: flex;
+            justify-content: space-between;
+            label{
+                width: 35%;
+            }
+        }
     }
 }
 @media screen and (max-width:768px){//SP

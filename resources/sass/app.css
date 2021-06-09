@@ -1037,9 +1037,30 @@ header #logo img {
   padding: 1rem;
 }
 
+#contactForm .attention {
+  color: #a49e90;
+  border: 1px solid #a49e90;
+  padding: .5rem 1rem;
+}
+
+#contactForm textarea {
+  height: 200px;
+}
+
 @media screen and (min-width: 769px) {
-  #contactForm {
-    width: 70%;
+  #contactForm .attention {
+    width: 26%;
+  }
+  #contactForm .form-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  #contactForm .form-group label {
+    width: 35%;
   }
 }
 
