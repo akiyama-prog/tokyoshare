@@ -5,13 +5,15 @@ html {
 }
 
 header,
-#main-area {
+#main-area,
+#contactForm {
   margin: 0 auto;
 }
 
 @media screen and (min-width: 769px) {
   header,
-  #main-area {
+  #main-area,
+  #contactForm {
     width: 70%;
   }
 }
@@ -989,5 +991,25 @@ header #logo img {
   color: #a49e90;
   text-decoration: none;
   font-size: 0.8rem;
+}
+
+#contactForm .contact-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  background: #f0f0f0;
+  border-top: 3px solid #856d53;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  #contactForm {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #contactForm {
+    width: 98%;
+  }
 }
 

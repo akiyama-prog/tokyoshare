@@ -6,7 +6,7 @@ $show-border-color: #eeede8;
 html{
     scroll-behavior: smooth;
 }
-header,#main-area{
+header,#main-area,#contactForm{
     margin: 0 auto;
     @media screen and (min-width:769px){//PC
         width: 70%;
@@ -836,5 +836,26 @@ header{
             text-decoration: none;
             font-size: .8rem;
         }
+    }
+}
+
+//お問い合わせページ
+#contactForm{
+    .contact-title{
+        font-size: 1.2rem;
+        font-weight: bold;
+        background: #f0f0f0 ;
+        border-top: 3px solid #856d53;
+        padding: 1rem;
+    }
+}
+@media screen and (min-width:769px){//PC
+    #contactForm{
+        width: 70%;
+    }
+}
+@media screen and (max-width:768px){//SP
+    #contactForm{
+        width: 98%;
     }
 }
