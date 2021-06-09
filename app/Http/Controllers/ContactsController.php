@@ -27,6 +27,7 @@ class ContactsController extends Controller
     {
         $request->validated();
 
-        Mail::to('autumn_ioy@yahoo.co.jp')->send(new ContactProperty($property, $request));
+        Mail::to('test@ytest.jp')->send(new ContactProperty($property, $request));
+        return view('contact.thanx');
     }
 }
