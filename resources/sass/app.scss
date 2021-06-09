@@ -118,7 +118,7 @@ header{
 }
 @media screen and (max-width:768px){//SP
     .searches{
-        top: 60%;
+        top: 26rem;
         left: 41%;
     }
 }
@@ -837,6 +837,7 @@ header{
         }
         @media screen and (max-width:768px){//SP
             padding: 1rem;
+            font-size: .9rem;
         }
     }
     .jump-to-top{

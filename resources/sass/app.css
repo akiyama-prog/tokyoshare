@@ -141,7 +141,7 @@ header #logo img {
 
 @media screen and (max-width: 768px) {
   .searches {
-    top: 60%;
+    top: 26rem;
     left: 41%;
   }
 }
@@ -1029,6 +1029,7 @@ header #logo img {
 @media screen and (max-width: 768px) {
   .artical-info .inquiry {
     padding: 1rem;
+    font-size: .9rem;
   }
 }
 
