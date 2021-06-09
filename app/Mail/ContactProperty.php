@@ -43,8 +43,7 @@ class ContactProperty extends Mailable
      */
     public function build()
     {
-        return $this->from('example@example.com')
-            ->view('mail.conatact_property')
+        return $this->view('mail.conatact_property')
             ->subject('物件問い合わせ[' . $this->property->property_name . ']')
             ->with([
                 'property_name'  => $this->property->property_name,

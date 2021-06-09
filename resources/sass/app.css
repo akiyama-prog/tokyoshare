@@ -572,7 +572,7 @@ header #logo img {
 
 @media screen and (min-width: 769px) {
   #property-show {
-    width: 60%;
+    width: 70%;
   }
   .inside-page-link, .facilities, .rooms, .location, .oparation, .artical-info {
     padding: 3rem 0;
